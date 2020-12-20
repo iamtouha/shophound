@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="2370.0591"
+   height="614.74481"
+   viewBox="0 0 627.0781 162.65123"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="Shophound Icon with text- Hound - Blue.svg"
+   inkscape:export-filename="/home/daniel/CloudStation/Shophound/Shophound Icon with text - Hound blue.png"
+   inkscape:export-xdpi="96.042198"
+   inkscape:export-ydpi="96.042198">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49765735"
+     inkscape:cx="890.95087"
+     inkscape:cy="-313.0048"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer2"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     lock-margins="true"
+     units="px"
+     fit-margin-top="10"
+     fit-margin-left="10"
+     fit-margin-right="10"
+     fit-margin-bottom="10"
+     inkscape:window-width="2277"
+     inkscape:window-height="1627"
+     inkscape:window-x="79"
+     inkscape:window-y="180"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-10.663026,-47.420648)" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Head"
+     transform="translate(9.1390737,10.522291)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70.5556px;line-height:0.95;font-family:'Days One';-inkscape-font-specification:'Days One, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#72c0ff;fill-opacity:1;stroke:#6b4a00;stroke-width:2.64583;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="149.46776"
+       y="121.47672"
+       id="text855"><tspan
+         sodipodi:role="line"
+         id="tspan853"
+         x="149.46776"
+         y="121.47672"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70.5556px;font-family:'Days One';-inkscape-font-specification:'Days One, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#72c0ff;fill-opacity:1;stroke:#6b4a00;stroke-width:2.64583;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">Shop Hound</tspan></text>
+    <circle
+       style="fill:#6b4a00;fill-opacity:1;stroke:none;stroke-width:2.46124;stroke-linecap:round;stroke-linejoin:round;paint-order:markers fill stroke"
+       id="path833"
+       cx="67.927879"
+       cy="66.544662"
+       r="74.42112"
+       inkscape:export-xdpi="96.042198"
+       inkscape:export-ydpi="96.042198" />
+    <path
+       style="fill:#72c0ff;fill-opacity:1;stroke:#ffffff;stroke-width:1.32292;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 112.421,48.974423 c 5.03604,0.965819 14.04333,1.292143 35.1292,8.678749 5.09353,2.370817 9.08402,-0.479412 -1.64384,32.504681 -0.60415,1.726983 -37.4702,6.731047 -44.74867,4.198907 -3.789942,11.52786 -3.168782,22.35087 0.47148,33.32703 -36.467772,3.48245 -82.854066,-9.11576 -87.496473,-11.43645 -1.313903,-4.44192 2.287182,-6.27842 1.577934,-14.27688 -1.087219,-12.260993 -1.945911,-29.686692 -1.03243,-37.345904 -0.08864,-19.278158 10.613476,-33.509389 16.105767,-36.57677 8.15602,-5.251664 54.48375,-13.076332 69.13979,-2.529154 7.724502,3.358224 9.634962,17.188987 12.497242,23.455791 z"
+       id="path881"
+       sodipodi:nodetypes="ccccccscccc" />
+    <path
+       style="fill:#6b4a00;fill-opacity:1;stroke:#ffffff;stroke-width:1.32292;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 18.272919,74.379725 c -1.062428,5.656808 0.327596,11.003331 25.44735,33.132915 16.754798,14.76036 9.673984,29.13106 32.709504,39.41291 11.77603,1.467 36.015297,6.79854 33.277427,-10.99108 C 96.644445,78.363486 72.896038,64.079533 50.455638,28.356394 c -3.5129,-0.707499 -18.46621,3.600709 -21.84539,6.776175 -7.380769,6.935806 -7.933032,30.843934 -10.337329,39.247156 z"
+       id="path886"
+       sodipodi:nodetypes="cscccsc" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Ear"
+     transform="translate(9.1390737,10.522291)" />
+</svg>
