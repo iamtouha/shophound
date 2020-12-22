@@ -5,10 +5,14 @@
         class="grey lighten-4 align-center justify-center"
         :class="[$store.getters.loading ? 'loading-screen' : 'd-none']"
       >
-        <v-progress-circular
+        <div class="my-3" style="width: 100px; height: 100px">
+          <logo />
+        </div>
+        <v-progress-linear
+          style="max-width: 175px"
           color="primary"
           indeterminate
-        ></v-progress-circular>
+        ></v-progress-linear>
       </div>
     </v-fade-transition>
     <v-app-bar extension-height="55px" :hide-on-scroll="!isMobile" fixed app>
@@ -20,7 +24,7 @@
         :class="[isMobile ? 'pl-0' : '']"
         @click="$router.push('/')"
       >
-        <v-img max-width="175px" src="/banner-hound-blue.svg"></v-img>
+        <img style="width: 165px" src="/banner-hound-blue.svg" />
       </v-toolbar-title>
       <v-spacer />
       <span v-show="!isMobile">
@@ -239,6 +243,7 @@ export default {
 <style>
 .loading-screen {
   display: flex;
+  flex-direction: column;
   position: fixed;
   z-index: 999;
   top: 0;

@@ -5,10 +5,14 @@
         class="grey lighten-4 align-center justify-center"
         :class="[$store.getters.loading ? 'loading-screen' : 'd-none']"
       >
-        <v-progress-circular
+        <div class="my-3" style="width: 100px; height: 100px">
+          <logo />
+        </div>
+        <v-progress-linear
+          style="max-width: 175px"
           color="primary"
           indeterminate
-        ></v-progress-circular>
+        ></v-progress-linear>
       </div>
     </v-fade-transition>
 
@@ -42,6 +46,7 @@ export default {
 <style>
 .loading-screen {
   display: flex;
+  flex-direction: column;
   position: fixed;
   z-index: 999;
   top: 0;
