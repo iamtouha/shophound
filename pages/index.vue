@@ -2,7 +2,7 @@
   <v-container class="fill-height">
     <v-row justify="center" align="center">
       <v-col cols="6" sm="4" md="3" lg="2">
-        <logo />
+        <logo width="auto" height="auto" />
       </v-col>
       <v-col cols="12">
         <v-row style="max-width: 800px" class="mx-auto" justify="center">
