@@ -1,105 +1,23 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="610"
-   height="610"
-   viewBox="0 0 161.39583 161.39585"
-   version="1.1"
-   id="svg8"
-   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
-   sodipodi:docname="Shophound Icon - Hound - Blue.svg"
-   inkscape:export-filename="/home/daniel/CloudStation/Shophound/Shophound Icon - Hound blue.png"
-   inkscape:export-xdpi="96.042198"
-   inkscape:export-ydpi="96.042198">
-  <defs
-     id="defs2" />
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="0.99065135"
-     inkscape:cx="125.97559"
-     inkscape:cy="152.86131"
-     inkscape:document-units="mm"
-     inkscape:current-layer="layer2"
-     inkscape:document-rotation="0"
-     showgrid="false"
-     lock-margins="true"
-     units="px"
-     fit-margin-top="5"
-     fit-margin-left="5"
-     fit-margin-right="5"
-     fit-margin-bottom="5"
-     inkscape:window-width="2277"
-     inkscape:window-height="1627"
-     inkscape:window-x="79"
-     inkscape:window-y="180"
-     inkscape:window-maximized="0" />
-  <metadata
-     id="metadata5">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(-18.942407,-40.97973)" />
-  <g
-     inkscape:groupmode="layer"
-     id="layer2"
-     inkscape:label="Head"
-     transform="translate(0.85969035,16.963206)">
-    <text
-       xml:space="preserve"
-       style="font-size:6.35px;line-height:0.95;font-family:'Days One';-inkscape-font-specification:'Days One';stroke-width:0.264583"
-       x="180.29453"
-       y="79.50325"
-       id="text855"><tspan
-         sodipodi:role="line"
-         id="tspan853"
-         x="180.29453"
-         y="79.50325"
-         style="stroke-width:0.264583" /></text>
-    <ellipse
-       style="fill:#6b4a00;fill-opacity:1;stroke:none;stroke-width:2.46357;stroke-linecap:round;stroke-linejoin:round;paint-order:markers fill stroke"
-       id="path833"
-       cx="74.370003"
-       cy="59.440887"
-       inkscape:export-xdpi="96.042198"
-       inkscape:export-ydpi="96.042198"
-       rx="73.906776"
-       ry="75.081177" />
-    <path
-       style="fill:#72c0ff;fill-opacity:1;stroke:#ffffff;stroke-width:1.32417;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 118.55561,41.714816 c 5.00125,0.974385 13.94629,1.303604 34.88642,8.755721 5.05834,2.391846 9.02125,-0.483663 -1.63247,32.792974 -0.59999,1.7423 -37.21123,6.790747 -44.43941,4.23615 -3.76374,11.630102 -3.14688,22.549109 0.46822,33.622619 -36.215729,3.51334 -82.281432,-9.19662 -86.891754,-11.53789 -1.304822,-4.48132 2.271375,-6.3341 1.567029,-14.4035 C 21.43394,82.811148 20.581182,65.230896 21.48835,57.503754 21.400321,38.054613 32.028471,23.697161 37.482805,20.602576 45.582456,15.304333 91.59,7.410266 106.14475,18.050989 c 7.67112,3.388009 9.56838,17.34144 12.41086,23.663827 z"
-       id="path881"
-       sodipodi:nodetypes="ccccccscccc" />
-    <path
-       style="fill:#6b4a00;fill-opacity:1;stroke:#ffffff;stroke-width:1.32417;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 25.058224,67.345443 c -1.055086,5.706979 0.325332,11.100922 25.271474,33.426777 16.639003,14.89128 9.607124,29.38944 32.483441,39.76248 11.694642,1.48001 35.766391,6.85884 33.047441,-11.08856 C 102.8881,71.364538 79.303826,56.953897 57.018519,20.913919 53.529897,20.200147 38.679935,24.546566 35.324107,27.750194 27.994349,34.747515 27.445904,58.867692 25.058224,67.345443 Z"
-       id="path886"
-       sodipodi:nodetypes="cscccsc" />
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer3"
-     inkscape:label="Ear"
-     transform="translate(0.85969035,16.963206)" />
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 595.28 595.28" style="enable-background:new 0 0 595.28 595.28;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#6B4C11;}
+	.st1{fill:#7EBBE7;stroke:#FFFFFF;stroke-width:5.0047;stroke-miterlimit:15.1181;}
+	.st2{fill:#6B4C11;stroke:#FFFFFF;stroke-width:5.0047;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:15.1181;}
+</style>
+<g id="layer2" transform="translate(0.85969035,16.963206)">
+	<ellipse id="path833" class="st0" cx="278.31" cy="266.43" rx="265.7" ry="269.92">
+	</ellipse>
+	<path id="path881" class="st1" d="M437.16,202.71c17.98,3.5,50.14,4.69,125.42,31.48c18.18,8.6,32.43-1.74-5.87,117.89
+		c-2.16,6.26-133.78,24.41-159.76,15.23c-13.53,41.81-11.31,81.06,1.68,120.87c-130.2,12.63-295.8-33.06-312.38-41.48
+		c-4.69-16.11,8.17-22.77,5.63-51.78c-3.88-44.47-6.95-107.67-3.69-135.45c-0.32-69.92,37.89-121.54,57.5-132.66
+		c29.12-19.05,194.52-47.43,246.84-9.17C420.12,129.81,426.94,179.98,437.16,202.71z"/>
+	<path id="path886" class="st2" d="M101.04,294.85c-3.79,20.52,1.17,39.91,90.85,120.17c59.82,53.53,34.54,105.66,116.78,142.95
+		c42.04,5.32,128.58,24.66,118.81-39.86C380.84,309.3,296.05,257.49,215.93,127.93c-12.54-2.57-65.93,13.06-77.99,24.58
+		C111.59,177.66,109.62,264.37,101.04,294.85z"/>
+</g>
+<g id="layer3" transform="translate(0.85969035,16.963206)">
+</g>
 </svg>

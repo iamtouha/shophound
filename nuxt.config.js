@@ -1,10 +1,8 @@
 import colors from 'vuetify/es5/util/colors'
 
 export default {
-  ssr: true,
-
-  target: 'server',
-
+  ssr: false,
+  target: 'static',
   head: {
     titleTemplate: '%s | shophound',
     title: 'shophound',
@@ -15,17 +13,15 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
-
   css: [],
-
   plugins: [],
-
   components: true,
   buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/vuetify'],
-
   modules: ['@nuxtjs/axios'],
 
-  axios: {},
+  axios: {
+    baseURL: process.env.BASE_URL || 'https://shophound.biz/v1',
+  },
 
   vuetify: {
     customVariables: ['~/assets/variables.scss'],

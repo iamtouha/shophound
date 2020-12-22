@@ -2,13 +2,13 @@
   <v-container class="fill-height">
     <v-row justify="center" align="center">
       <v-col cols="6" sm="4" md="3" lg="2">
-        <v-img src="/hound-blue.svg"></v-img>
+        <logo />
       </v-col>
       <v-col cols="12">
         <v-row style="max-width: 800px" class="mx-auto" justify="center">
           <v-col cols="12" sm="8">
             <v-text-field
-              v-model="search.query"
+              v-model="query"
               hide-details
               label="Enter text"
               outlined
@@ -17,10 +17,10 @@
           </v-col>
           <v-col cols="12" sm="4">
             <v-select
-              v-model="search.currency"
+              v-model="currency"
               hide-details
               outlined
-              :items="currencies"
+              :items="$store.getters.currencies"
               label="Currency"
               value="all"
               item-value="key"
@@ -29,8 +29,8 @@
           </v-col>
           <v-btn ref="searchBtn" x-large color="primary" @click="proceedSearch">
             <v-icon class="mr-1">mdi-magnify</v-icon>
-            search</v-btn
-          >
+            search
+          </v-btn>
         </v-row>
       </v-col>
     </v-row>
@@ -47,34 +47,41 @@
 
 <script>
 export default {
-  components: {},
-
+  name: 'HomePage',
+  layout: 'homepage',
   data() {
     return {
       snackbar: false,
-      search: {
-        query: '',
-        currency: 'all',
-      },
-      currencies: [
-        {
-          name: 'All',
-          key: 'all',
-        },
-        {
-          name: 'USD',
-          key: 'usd',
-        },
-        {
-          name: 'GBP',
-          key: 'gbp',
-        },
-      ],
     }
+  },
+  computed: {
+    query: {
+      get() {
+        return this.$store.getters.search?.query
+      },
+      set(val) {
+        this.$store.commit('set_query', val)
+      },
+    },
+    currency: {
+      get() {
+        return this.$store.getters.search?.currency
+      },
+      set(val) {
+        this.$store.commit('set_currency', val)
+      },
+    },
   },
   methods: {
     proceedSearch() {
-      if (this.search.query.length) {
+      if (this.query.length) {
+        this.$router.push({
+          path: '/products',
+          query: {
+            q: this.query,
+            currency: this.currency,
+          },
+        })
       } else this.snackbar = true
     },
   },
