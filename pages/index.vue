@@ -72,6 +72,10 @@ export default {
       },
     },
   },
+  created() {
+    this.query = ''
+    this.currency = ''
+  },
   methods: {
     proceedSearch() {
       if (this.query.length) {

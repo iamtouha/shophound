@@ -6,6 +6,7 @@
         class="mx-auto"
         height="400px"
         hide-delimiters
+        :show-arrows="product.images.length > 1"
       >
         <v-carousel-item v-for="img in product.images" :key="img">
           <v-img contain height="100%" :src="img" :lazy-src="img"></v-img>

@@ -162,13 +162,14 @@ export default {
     },
     '$route.query': {
       deep: true,
-      handler({ tags, q, currency }) {
+      handler({ tags, q, currency, page }) {
         this.params = {
           ...this.params,
           tags,
           q,
           currency,
         }
+        this.page = +page
         this.fetchItems()
       },
     },

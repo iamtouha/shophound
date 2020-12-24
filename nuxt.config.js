@@ -5,6 +5,7 @@ export default {
   target: 'static',
   router: {
     mode: 'hash',
+    base: '/',
   },
   head: {
     titleTemplate: '%s | shophound',
