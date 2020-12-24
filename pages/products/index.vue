@@ -120,7 +120,7 @@ export default {
   data() {
     return {
       hits: [],
-      loading: true,
+      loading: false,
       totalHits: 0,
       tags: [],
       page: 1,
@@ -149,6 +149,7 @@ export default {
       }
     },
   },
+
   watch: {
     page: 'paginate',
     'params.tags': {
@@ -172,7 +173,18 @@ export default {
       },
     },
   },
-
+  created() {
+    // const { tags, page, q, currency } = this.$route.query
+    // this.page = +page
+    // this.params = {
+    //   tags,
+    //   q,
+    //   from: (page - 1) * 36,
+    //   size: 36,
+    //   currency: currency || '',
+    // }
+    // this.fetchItems()
+  },
   methods: {
     filterCategories() {
       const tags = this.selectedTags.map((tag) => tag.id).join(',')

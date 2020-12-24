@@ -3,6 +3,9 @@ import colors from 'vuetify/es5/util/colors'
 export default {
   ssr: false,
   target: 'static',
+  router: {
+    mode: 'hash',
+  },
   head: {
     titleTemplate: '%s | shophound',
     title: 'shophound',
@@ -46,17 +49,5 @@ export default {
 
   build: {
     extractCSS: true,
-    optimization: {
-      splitChunks: {
-        cacheGroups: {
-          styles: {
-            name: 'styles',
-            test: /\.(css|vue)$/,
-            chunks: 'all',
-            enforce: true,
-          },
-        },
-      },
-    },
   },
 }

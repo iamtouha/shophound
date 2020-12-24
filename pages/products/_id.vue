@@ -65,6 +65,20 @@ export default {
       return this.$vuetify.breakpoint.xsOnly
     },
   },
+  created() {
+    // this.fetchProduct()
+  },
+  methods: {
+    async fetchProduct() {
+      try {
+        const id = this.$route.params.id.split('%\\%').join('/')
+        const { data } = await this.$axios.get('/item/' + id)
+        this.product = data
+      } catch (error) {
+        alert(error.message)
+      }
+    },
+  },
   head() {
     return {
       title: this.product.title,
@@ -72,5 +86,3 @@ export default {
   },
 }
 </script>
-
-<style></style>
