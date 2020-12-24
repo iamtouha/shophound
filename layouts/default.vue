@@ -51,6 +51,7 @@
                 label="Insert text"
                 flat
                 dense
+                @keyup.enter="proceedSearch"
               >
               </v-text-field
             ></v-col>
@@ -233,6 +234,7 @@ export default {
           query: {
             q: this.query,
             currency: this.currency,
+            page: 1,
           },
         })
       } else this.snackbar = true
