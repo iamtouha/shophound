@@ -46,7 +46,8 @@
 export default {
   name: 'Product',
   async asyncData({ $axios, params }) {
-    const { data } = await $axios.get('/item/' + params.id)
+    const id = params.id.split('%\\%').join('/')
+    const { data } = await $axios.get('/item/' + id)
     return {
       product: data,
     }
