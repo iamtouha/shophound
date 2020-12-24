@@ -72,7 +72,7 @@ export default {
   methods: {
     async fetchProduct() {
       try {
-        const id = this.$route.params.id.split('%\\%').join('/')
+        const id = this.$route.params.id
         const { data } = await this.$axios.get('/item/' + id)
         this.product = data
       } catch (error) {

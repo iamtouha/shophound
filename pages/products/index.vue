@@ -53,7 +53,7 @@
           nuxt
           :to="{
             name: 'products-id',
-            params: { id: product.id.split('/').join('%\\%') },
+            params: { id: product.id },
           }"
           class="flex-grow-1"
         >
@@ -87,20 +87,23 @@
 
 <script>
 import categories from '~/assets/categories.json'
+const perPage = 36
 export default {
   name: 'Products',
   async asyncData({ $axios, query }) {
     const params = {
       tags: query.tags,
       q: query.q,
-      from: (query.page - 1) * 36,
-      size: 36,
+      from: (query.page - 1) * perPage,
+      size: perPage,
       currency: query.currency || '',
     }
     const queryString = Object.keys(params)
-      .filter((key) => Boolean(params[key]))
+      .filter((key) => params[key] !== undefined)
       .map((key) => `${key}=${params[key]}`)
       .join('&')
+    // eslint-disable-next-line
+    console.log(queryString)
 
     const { data } = await $axios.get('/item/?' + queryString)
     const { hits, totalHits, tags } = data
@@ -125,7 +128,7 @@ export default {
       tags: [],
       page: 1,
       params: {
-        size: 36,
+        size: perPage,
       },
       selectedTags: [],
     }
@@ -167,7 +170,7 @@ export default {
           ...this.params,
           tags,
           q,
-          currency,
+          currency: currency || '',
         }
         this.page = +page
         this.fetchItems()
@@ -180,8 +183,8 @@ export default {
     // this.params = {
     //   tags,
     //   q,
-    //   from: (page - 1) * 36,
-    //   size: 36,
+    //   from: (page - 1) * perPage,
+    //   size: perPage,
     //   currency: currency || '',
     // }
     // this.fetchItems()
@@ -200,6 +203,7 @@ export default {
       })
     },
     paginate(page) {
+      if (page === +this.$route.query?.page) return
       this.$router.push({
         path: '/products',
         query: {
@@ -219,9 +223,11 @@ export default {
           from: this.params.size * (this.page - 1),
         }
         const queryString = Object.keys(params)
-          .filter((key) => Boolean(params[key]))
+          .filter((key) => params[key] !== undefined)
           .map((key) => `${key}=${params[key]}`)
           .join('&')
+        // eslint-disable-next-line
+        console.log(queryString)
         const { data } = await this.$axios.get('/item/?' + queryString)
         const { hits, totalHits, tags } = data
         this.hits = hits
