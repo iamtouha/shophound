@@ -26,14 +26,16 @@
         </v-btn>
       </v-col>
     </v-row>
-    <v-row>
+    <v-row
+      :align="!hits.length ? 'center' : 'stretch'"
+      :style="{
+        height: !skeletons && !hits.length ? 'calc(100% - 110px)' : 'auto',
+      }"
+    >
       <v-col v-for="n in skeletons" :key="n" cols="12" sm="6" md="4" lg="3">
         <v-skeleton-loader height="340" type="card"></v-skeleton-loader>
       </v-col>
-      <v-col
-        v-show="!skeletons && !hits.length"
-        class="text-center fill-height"
-      >
+      <v-col v-show="!skeletons && !hits.length" class="text-center">
         <v-icon size="64">mdi-magnify</v-icon>
         <br />
         no item found
@@ -41,6 +43,7 @@
       <v-col
         v-for="product in hits"
         :key="product.id"
+        class="d-flex"
         cols="12"
         sm="6"
         md="4"
@@ -48,8 +51,11 @@
       >
         <v-card
           nuxt
-          :to="{ name: 'products-id', params: { id: product.id } }"
-          class="fill-height"
+          :to="{
+            name: 'products-id',
+            params: { id: product.id.split('/').join('%\\%') },
+          }"
+          class="flex-grow-1"
         >
           <v-img
             height="300px"
@@ -85,13 +91,14 @@ export default {
   name: 'Products',
   async asyncData({ $axios, query }) {
     const params = {
-      ...query,
-      from: 0,
+      tags: query.tags,
+      q: query.q,
+      from: (query.page - 1) * 36,
       size: 36,
       currency: query.currency || '',
     }
-
     const queryString = Object.keys(params)
+      .filter((key) => Boolean(params[key]))
       .map((key) => `${key}=${params[key]}`)
       .join('&')
 
@@ -106,6 +113,7 @@ export default {
         count: tag.count,
       })),
       params,
+      page: +query.page,
       loading: false,
     }
   },
@@ -142,7 +150,7 @@ export default {
     },
   },
   watch: {
-    page: 'fetchItems',
+    page: 'paginate',
     'params.tags': {
       immediate: true,
       handler(val) {
@@ -153,13 +161,14 @@ export default {
     },
     '$route.query': {
       deep: true,
-      handler(val) {
+      handler({ tags, q, currency }) {
         this.params = {
           ...this.params,
-          ...val,
+          tags,
+          q,
+          currency,
         }
-        if (this.page === 1) this.fetchItems(1)
-        else this.page = 1
+        this.fetchItems()
       },
     },
   },
@@ -169,18 +178,35 @@ export default {
       const tags = this.selectedTags.map((tag) => tag.id).join(',')
       this.$router.push({
         path: '/products',
-        query: { q: this.params?.q, tags, currency: this.params?.currency },
+        query: {
+          q: this.params?.q,
+          tags,
+          currency: this.params?.currency,
+          page: 1,
+        },
       })
     },
-    async fetchItems(page) {
+    paginate(page) {
+      this.$router.push({
+        path: '/products',
+        query: {
+          q: this.params?.q,
+          tags: this.params?.tags,
+          currency: this.params?.currency,
+          page,
+        },
+      })
+    },
+    async fetchItems() {
       this.loading = true
       try {
         this.hits = []
         const params = {
           ...this.params,
-          from: this.params.size * (page - 1),
+          from: this.params.size * (this.page - 1),
         }
         const queryString = Object.keys(params)
+          .filter((key) => Boolean(params[key]))
           .map((key) => `${key}=${params[key]}`)
           .join('&')
         const { data } = await this.$axios.get('/item/?' + queryString)
@@ -192,7 +218,6 @@ export default {
           id: tag.id,
           count: tag.count,
         }))
-        window.scroll({ top: 0, behavior: 'smooth' })
       } catch (error) {
         alert(error.message)
       }
