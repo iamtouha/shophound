@@ -2,7 +2,7 @@
   <v-container class="fill-height">
     <v-row class="py-5">
       <v-col cols="12" sm="9" md="10">
-        <v-combobox
+        <v-select
           v-model="selectedTags"
           label="Select Categories"
           :items="tags"
@@ -17,7 +17,7 @@
           <template v-slot:item="{ item }">
             {{ item.name }} ({{ item.count }})
           </template>
-        </v-combobox>
+        </v-select>
       </v-col>
       <v-col cols="12" sm="3" md="2" class="text-center">
         <v-btn color="primary" outlined large text @click="filterCategories">
@@ -60,8 +60,10 @@
           <v-img
             height="300px"
             class="align-end"
+            position="top"
             :src="product.images[0]"
             :lazy-src="product.images[0]"
+            contain
           >
             <v-chip color="primary" class="ma-2">
               {{ parseFloat(product.maxPrice).toFixed(2) }}
@@ -160,7 +162,9 @@ export default {
       handler(val) {
         if (!val?.length) return
         const tags = val.split(',')
-        this.selectedTags = this.tags.filter((tag) => tags.includes(tag.id))
+        this.selectedTags = this.tags
+          .filter((tag) => tags.includes(tag.id))
+          .map((tag) => tag.id)
       },
     },
     '$route.query': {
@@ -191,7 +195,7 @@ export default {
   },
   methods: {
     filterCategories() {
-      const tags = this.selectedTags.map((tag) => tag.id).join(',')
+      const tags = this.selectedTags.join(',')
       this.$router.push({
         path: '/products',
         query: {
