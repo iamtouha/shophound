@@ -19,7 +19,7 @@
           {{ product.title }}
         </v-list-item-title>
         <v-list-item-subtitle class="text-subtitle-1">
-          {{ parseFloat(product.maxPrice).toFixed(3) }} {{ product.currency }}
+          {{ parseFloat(product.maxPrice).toFixed(2) }} {{ product.currency }}
         </v-list-item-subtitle>
       </v-list-item-content>
       <v-list-item-action v-show="!isMobile">
@@ -47,7 +47,7 @@
 export default {
   name: 'Product',
   async asyncData({ $axios, params }) {
-    const id = params.id.split('%\\%').join('/')
+    const id = params.id
     const { data } = await $axios.get('/item/' + id)
     return {
       product: data,
